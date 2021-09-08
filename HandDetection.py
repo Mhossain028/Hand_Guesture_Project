@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 import cv2
 import numpy as np
 import math
@@ -83,7 +77,6 @@ while True:
         #print("Area==",cv2.contourArea(hull) - cv2.contourArea(cm))
         for i in range(defects.shape[0]):
             s,e,f,d = defects[i,0]
-           
             start = tuple(cm[s][0])
             end = tuple(cm[e][0])
             far = tuple(cm[f][0])
@@ -119,7 +112,6 @@ while True:
             cv2.putText(frame, "5", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
         else:
             pass
-           
     except:
         pass
         
